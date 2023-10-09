@@ -8,7 +8,7 @@ import Devider from '@element/Devider';
 export default function Home() {
   return (
     <>
-      <PageTitle title='Styleguide test'/>
+      <PageTitle title='Styleguide'/>
       
       <IntroductionStyleGuide />
 
