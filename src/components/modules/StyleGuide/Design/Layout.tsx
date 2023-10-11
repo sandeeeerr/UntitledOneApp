@@ -122,7 +122,7 @@ function Layout() {
       <h6>Sizes</h6>
       <p className='mb-5 font-small text-gray-400'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       
-      <table className="min-w-full text-left text-sm overflow-auto">
+      <table className="min-w-full text-left text-sm overflow-auto max-w-6xl mx-auto px-4 mt-16 lg:mt-20">
         <thead className="border-b font-medium text-white">
           <tr>
             <th scope="col" className="px-0 py-4">Name</th>
