@@ -35,8 +35,8 @@ export default function Sidebar() {
     });
   return (
     <>
-      <aside className="px-6 my-2 py-0 mb-20 w-full lg:w-1/4  h[-100] dark:text-gray-100 border-l-2 lg:sticky">
-        <ul className="flex flex-col space-y-1 sidebar lg:sticky lg:top-28">
+      <aside className="px-6 my-2 py-0 mb-20 w-full lg:w-1/4  h[-800] dark:text-gray-100 border-l-2 lg:sticky">
+        <ul className="flex flex-col space-y-1 sidebar lg:sticky lg:top-24">
 
           <li>
             <div className="flex flex-row items-center">
@@ -66,8 +66,9 @@ export default function Sidebar() {
             <SidebarMenuItem disabled={false} name="Form Elements" href='form' icon='M3 8.25V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18V8.25m-18 0V6a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6zM7.5 6h.008v.008H7.5V6zm2.25 0h.008v.008H9.75V6z'/>
             <SidebarMenuItem disabled={false} name="Breadcrumbs" href='bread' icon='M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244'/>
             <SidebarMenuItem disabled={false} name="Avatars" href='avatar' icon='M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z'/>
-            <SidebarMenuItem disabled={true}  name="Lists" href='lst' icon='M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z'/>    
             <SidebarMenuItem disabled={true}  name="Tables" href='tbl' icon='M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z'/>  
+            <SidebarMenuItem disabled={true}  name="Modals" href='mdl' icon='M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-8.25zM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-2.25z'/>    
+
         </ul>
       </aside>
 

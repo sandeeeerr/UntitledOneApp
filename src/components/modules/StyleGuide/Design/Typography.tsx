@@ -7,7 +7,7 @@ function Typography() {
   return (
     <>
       <h4>headers</h4>
-      <p className='mb-5 font-small text-gray-400'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p className='mb-5 font-small text-gray-400'>The font scale consists of 5 different font sizes. The default size applied to the body is Medium.</p>
 
       <ShowcaseBlock>
         <div className={` w-full text-left rounded-lg`}>
@@ -38,7 +38,7 @@ function Typography() {
       <Devider /> 
 
       <h4>Font weight</h4>
-      <p className='mb-5 font-small text-gray-400'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p className='mb-5 font-small text-gray-400'>There are two font weights available to use — Bold and Regular.</p>
       
       <ShowcaseBlock>
         <p>Lorem ipsum dolor sit amet </p>

@@ -1,7 +1,15 @@
 import MusicCard from '@element/MusicCard';
 import PageTitle from '@/components/modules/PageTitle';
+import { redirect } from 'next/navigation'
+import { authOptions, getAuthSession } from '@/lib/auth'
 
-export default function Home() {
+export default async function ExplorePage() {
+  const session = await getAuthSession()
+
+  if (!session?.user) {
+    redirect(authOptions?.pages?.signIn || '/login')
+  }
+  
   return (
     <>
       <PageTitle title='Explore'/>

@@ -29,7 +29,7 @@ function CommingSoon() {
         <h1>UntitledOne</h1>
 
         <div className='fixed bottom-10 opacity-90'>
-          <a href="/styleguide">This website is under development, but take a look at the <span className='text-primary hover:underline'>styleguide</span></a>
+          <a href="/styleguide">This website is under development, but take a look at the <span className='text-secondary hover:underline'>styleguide</span></a>
         </div>
       </div>
 

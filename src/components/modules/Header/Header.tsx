@@ -26,8 +26,12 @@ const Header = async () => {
           </Link>
 
           <div className="hidden md:flex items-center space-x-1">
-            <a href="/" className="py-5 px-3 text-white hover:text-gray-200">Home</a>
-            <a href="#" className="py-5 px-3 text-white hover:text-gray-200">Explore</a>
+            <Link href='/' className={buttonVariants({ variant: 'ghost' })}>
+              Home
+            </Link>     
+            <Link href='/explore' className={buttonVariants({ variant: 'ghost' })}>
+              Expore
+            </Link>       
           </div>
           
         </div>
@@ -36,23 +40,23 @@ const Header = async () => {
 
         <div className="hidden md:flex items-center space-x-1">
           {session?.user ? (
-            <div>
+            <>
               <Link href='/api/auth/signout' className={buttonVariants({ variant: 'ghost' })}>
                 Sign out
               </Link>
               <Link href='/settings' className={buttonVariants()}>
                 Settings
               </Link>
-            </div>
+            </>
           ) : (
-            <div>
+            <>
               <Link href='/sign-in' className={buttonVariants({ variant: 'ghost' })}>
                 Sign In
               </Link>
               <Link href='/sign-up' className={buttonVariants()}>
                 Sign Up
               </Link>
-            </div>
+            </>
           )}
         </div>
 
