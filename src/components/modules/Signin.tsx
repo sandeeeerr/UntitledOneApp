@@ -4,9 +4,9 @@ import Link from 'next/link'
 
 const SignIn = () => {
   return (
-    <div className='container mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[500px] bg-black p-12 rounded-xl border-2'>
+    <div className='container mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[400px] rounded-xl'>
       <div className='flex flex-col space-y-2 text-center'>
-        <h1 className='text-5xl font-semibold tracking-tight border-b-2 pb-2 mb-10'>Welcome back</h1>
+        <h1 className='mb-10'>Sign In</h1>
         <p className='text-sm max-w-xs mx-auto'>
           By continuing, you are setting up a UntitledOne account and agree to our
           User Agreement and Privacy Policy.
