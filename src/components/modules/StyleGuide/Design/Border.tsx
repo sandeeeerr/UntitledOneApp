@@ -1,6 +1,6 @@
 import React from 'react'
 import Devider from '@element/Devider';
-import ShowcaseBlock from '@element/ShowcaseBlock';
+import {ShowcaseBlock} from '@element/ShowcaseBlock';
 
 
 function Border() {

@@ -1,7 +1,7 @@
 import React from 'react'
 import ColorBlock from '@element/ColorBlock';
 import Devider from '@element/Devider';
-import ShowcaseBlock from '@element/ShowcaseBlock';
+import {ShowcaseBlock} from '@element/ShowcaseBlock';
 import Header from '@module/Header/Header';
 
 
@@ -16,14 +16,14 @@ function Layout() {
 
       <ShowcaseBlock>
         <div className='flex space-x-3 mb-1'>  
-          <div className='w-full bg-backgroundOverlays border-2 pt-8 rounded'> </div>      
+          <div className='w-full bg-background border-2 pt-8 rounded'> </div>      
         </div>
         <div className='flex space-x-3 '>     
-          <div className='w-1/4 bg-background border-2 pt-32 rounded'> </div>   
-          <div className='w-3/4 bg-background border-2 pt-32 rounded '> </div>
+          <div className='w-1/4 bg-darkGrey border-2 pt-32 rounded'> </div>   
+          <div className='w-3/4 bg-darkGrey border-2 pt-32 rounded '> </div>
         </div>
         <div className='flex space-x-3 mt-1'>  
-          <div className='w-full bg-backgroundOverlays border-2 pt-12 rounded'> </div>      
+          <div className='w-full bg-background border-2 pt-12 rounded'> </div>      
         </div>
       </ShowcaseBlock>
 
@@ -33,7 +33,7 @@ function Layout() {
       <ShowcaseBlock>
         <div className='flex space-x-3 '>      
 
-          <div className='w-full bg-background border-2 pt-28 rounded '>
+          <div className='w-full bg-darkGrey border-2 pt-28 rounded '>
             
           </div>
         </div>
@@ -44,7 +44,7 @@ function Layout() {
 
       <ShowcaseBlock>
         <div className='flex space-x-3 '>      
-          <div className='w-1/4 bg-backgroundOverlays border-2 pt-28 rounded'>
+          <div className='w-1/4 bg-darkGrey border-2 pt-28 rounded'>
             
           </div>  
           <div className='w-3/4 bg-background border-2 pt-28 rounded '>
@@ -61,7 +61,7 @@ function Layout() {
           <div className='w-3/4 bg-background border-2 pt-28 rounded '>
             
           </div>
-          <div className='w-1/4 bg-backgroundOverlays border-2 pt-28 rounded'>
+          <div className='w-1/4 bg-darkGrey border-2 pt-28 rounded'>
             
           </div>  
         </div>

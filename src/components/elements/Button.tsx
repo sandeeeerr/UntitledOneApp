@@ -9,20 +9,19 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          'bg-secondary black hover:bg-gray-500',
-        destructive: 'text-white hover:bg-red-600 dark:hover:bg-red-600',
-        outline:
-          'bg-zinc-100 text-zinc-900 hover:bg-zinc-200 outline outline-1 outline-zinc-300',
-        subtle:
-          'hover:bg-zinc-200 bg-zinc-100 text-zinc-900',
+          'bg-secondary text-black hover:bg-darkGrey hover:text-lightGrey',
+        secondary: 
+          'bg-darkGrey text-lightGrey hover:bg-transparent',
+        disabled:
+          'bg-darkGrey text-lightGrey opacity-50',
         ghost:
-          'bg-transparent hover:bg-zinc-100 text-zinc-800 data-[state=open]:bg-transparent data-[state=open]:bg-transparent',
-        link: 'bg-transparent dark:bg-transparent underline-offset-4 hover:underline text-slate-900 dark:text-slate-100 hover:bg-transparent dark:hover:bg-transparent',
+          'bg-transparent text-lightGrey hover:bg-darkGrey',
+        link: 
+          'bg-transparent underline-offset-4 hover:underline text-secondary hover:bg-transparent dark:hover:bg-transparent',
       },
       size: {
         default: 'h-10 py-2 px-4',
         sm: 'h-9 px-2 rounded-md',
-        xs: 'h-8 px-1.5 rounded-sm',
         lg: 'h-11 px-8 rounded-md',
       },
     },

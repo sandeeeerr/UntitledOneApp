@@ -1,5 +1,5 @@
 import MusicCard from '@element/MusicCard';
-import PageTitle from '@module/PageTitle/PageTitle';
+import PageTitle from '@/components/modules/PageTitle';
 
 export default function Home() {
   return (

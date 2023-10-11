@@ -21,8 +21,12 @@ module.exports = {
         primary: "#31A0F0",
         secondary: "#31F080",
         danger: "#F34E4E",
+
+        black: "#111111",
         background: "#212121",
-        backgroundOverlays: "#111111",
+        backgroundSecondary: "#2F2F2F",
+        darkGrey: "#474747",
+        lightGrey: "#AFAFAF",
       },
     },
   },
@@ -31,8 +35,9 @@ module.exports = {
     'lg:grid-cols-2',
     'lg:grid-cols-3',
     'lg:grid-cols-4',
+    'lg:grid-cols-5',
     {
-    pattern: /(bg|text|border)-(primary|secondary|danger|background|backgroundOverlays|gray|amber|red)/
+    pattern: /(bg|text|border)-(primary|secondary|danger|black|background|backgroundSecondary|darkGrey|lightGrey|gray|amber|red)/
     }
   ],  
   plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],

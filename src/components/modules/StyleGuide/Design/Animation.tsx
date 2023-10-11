@@ -1,7 +1,7 @@
 import React from 'react'
 import ColorBlock from '@element/ColorBlock';
 import Devider from '@element/Devider';
-import ShowcaseBlock from '@element/ShowcaseBlock';
+import {ShowcaseBlock} from '@element/ShowcaseBlock';
 
 function Animation() {
   return (

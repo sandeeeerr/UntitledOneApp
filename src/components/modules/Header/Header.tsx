@@ -4,15 +4,14 @@ import React from "react";
 import { useState } from "react";
 import { useRouter } from 'next/navigation'
 import Link from "next/link";
-import {Button} from "@element/Button";
-
+import {Button, buttonVariants} from "@element/Button";
 
 export default function Header() {
   const router = useRouter()
   const [display, setDisplay] = useState(false);
   return (
   <>
-    <nav className="bg-backgroundOverlays fixed w-full top-0 z-10 border-y-2 border-t-transparent">
+    <nav className="bg-black fixed w-full top-0 z-10 border-y-2 border-t-transparent">
     <div className="max-w-6xl mx-auto px-4">
       <div className="flex justify-between">
         <div className="flex space-x-4">
@@ -32,11 +31,12 @@ export default function Header() {
 
 
         <div className="hidden md:flex items-center space-x-1">
-          <a href="/" className="py-5 px-3 text-gray-400">Login</a>
-          <Button
-            onClick={() => router.push('login')}>
-            Signup
-          </Button>
+          <Link href='/sign-in' className={buttonVariants({ variant: 'ghost' })}>
+            Sign In
+          </Link>
+          <Link href='/sign-up' className={buttonVariants()}>
+            Sign Up
+          </Link>
         </div>
 
 
