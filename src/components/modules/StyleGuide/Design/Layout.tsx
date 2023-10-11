@@ -61,7 +61,7 @@ function Layout() {
           <div className='w-3/4 bg-background border-2 pt-28 rounded '>
             
           </div>
-          <div className='w-1/4 bg-darkGrey border-2 pt-28 rounded'>
+          <div className='w-1/4 bg-backgroundOverlays border-2 pt-28 rounded'>
             
           </div>  
         </div>
@@ -125,74 +125,74 @@ function Layout() {
       <table className="min-w-full text-left text-sm overflow-auto">
         <thead className="border-b font-medium text-white">
           <tr>
-            <th scope="col" className="px-4 py-4">Name</th>
-            <th scope="col" className="px-4 py-4">Size</th>
-            <th scope="col" className="px-4 py-4">Pixels</th>
-            <th scope="col" className="px-4 py-4"></th>
+            <th scope="col" className="px-0 py-4">Name</th>
+            <th scope="col" className="px-0 py-4">Size</th>
+            <th scope="col" className="px-0 py-4">Pixels</th>
+            <th scope="col" className="px-0 py-4"></th>
           </tr>
         </thead>
         <tbody className='text-gray-400'>
           <tr className="border-b-2 ">
-            <td className="whitespace-nowrap px-4 py-4">1</td>
-            <td className="whitespace-nowrap px-4 py-4">0.25rem</td>
-            <td className="whitespace-nowrap px-4 py-4">0px</td>
-            <td className="whitespace-nowrap px-4 py-4">
+            <td className="whitespace-nowrap px-0 py-4">1</td>
+            <td className="whitespace-nowrap px-0 py-4">0.25rem</td>
+            <td className="whitespace-nowrap px-0 py-4">0px</td>
+            <td className="whitespace-nowrap px-0 py-4">
               <div className="h-4 w-0 pr-1 bg-secondary" ></div>
             </td>
           </tr>
           <tr className="border-b">
-            <td className="whitespace-nowrap px-4 py-4">2</td>
-            <td className="whitespace-nowrap px-4 py-4">0.5rem</td>
-            <td className="whitespace-nowrap px-4 py-4">1px</td>
-            <td className="whitespace-nowrap px-4 py-4">
+            <td className="whitespace-nowrap px-0 py-4">2</td>
+            <td className="whitespace-nowrap px-0 py-4">0.5rem</td>
+            <td className="whitespace-nowrap px-0 py-4">1px</td>
+            <td className="whitespace-nowrap px-0 py-4">
               <div className="h-4 w-0 pr-2 bg-secondary" ></div>
             </td>
           </tr>
           <tr className="border-b">
-            <td className="whitespace-nowrap px-4 py-4">4</td>
-            <td className="whitespace-nowrap px-4 py-4">1rem</td>
-            <td className="whitespace-nowrap px-4 py-4">2px</td>
-            <td className="whitespace-nowrap px-4 py-4">
+            <td className="whitespace-nowrap px-0 py-4">4</td>
+            <td className="whitespace-nowrap px-0 py-4">1rem</td>
+            <td className="whitespace-nowrap px-0 py-4">2px</td>
+            <td className="whitespace-nowrap px-0 py-4">
               <div className="h-4 w-0 pr-4 bg-secondary" ></div>
             </td>
           </tr>
           <tr className="border-b">
-            <td className="whitespace-nowrap px-4 py-4">5</td>
-            <td className="whitespace-nowrap px-4 py-4">1rem</td>
-            <td className="whitespace-nowrap px-4 py-4">2px</td>
-            <td className="whitespace-nowrap px-4 py-4">
+            <td className="whitespace-nowrap px-0 py-4">5</td>
+            <td className="whitespace-nowrap px-0 py-4">1rem</td>
+            <td className="whitespace-nowrap px-0 py-4">2px</td>
+            <td className="whitespace-nowrap px-0 py-4">
               <div className="h-4 w-0 pr-5 bg-secondary" ></div>
             </td>
           </tr>
           <tr className="border-b">
-            <td className="whitespace-nowrap px-4 py-4">8</td>
-            <td className="whitespace-nowrap px-4 py-4">2rem</td>
-            <td className="whitespace-nowrap px-4 py-4">2px</td>
-            <td className="whitespace-nowrap px-4 py-4">
+            <td className="whitespace-nowrap px-0 py-4">8</td>
+            <td className="whitespace-nowrap px-0 py-4">2rem</td>
+            <td className="whitespace-nowrap px-0 py-4">2px</td>
+            <td className="whitespace-nowrap px-0 py-4">
               <div className="h-4 w-0 pr-8 bg-secondary" ></div>
             </td>
           </tr>
           <tr className="border-b">
-          <td className="whitespace-nowrap px-4 py-4">12</td>
-            <td className="whitespace-nowrap px-4 py-4">3rem</td>
-            <td className="whitespace-nowrap px-4 py-4">2px</td>
-            <td className="whitespace-nowrap px-4 py-4">
+          <td className="whitespace-nowrap px-0 py-4">12</td>
+            <td className="whitespace-nowrap px-0 py-4">3rem</td>
+            <td className="whitespace-nowrap px-0 py-4">2px</td>
+            <td className="whitespace-nowrap px-0 py-4">
               <div className="h-4 w-0 pr-12 bg-secondary" ></div>
             </td>          
           </tr>
           <tr className="border-b">
-          <td className="whitespace-nowrap px-4 py-4">20</td>
-            <td className="whitespace-nowrap px-4 py-4">0.125rem</td>
-            <td className="whitespace-nowrap px-4 py-4">2px</td>
-            <td className="whitespace-nowrap px-4 py-4">
+          <td className="whitespace-nowrap px-0 py-4">20</td>
+            <td className="whitespace-nowrap px-0 py-4">0.125rem</td>
+            <td className="whitespace-nowrap px-0 py-4">2px</td>
+            <td className="whitespace-nowrap px-0 py-4">
               <div className="h-4 w-0 pr-20 bg-secondary" ></div>
             </td>          
           </tr>
           <tr className="">
-          <td className="whitespace-nowrap px-4 py-4">32</td>
-            <td className="whitespace-nowrap px-4 py-4">0.125rem</td>
-            <td className="whitespace-nowrap px-4 py-4">2px</td>
-            <td className="whitespace-nowrap px-4 py-4">
+          <td className="whitespace-nowrap px-0 py-4">32</td>
+            <td className="whitespace-nowrap px-0 py-4">0.125rem</td>
+            <td className="whitespace-nowrap px-0 py-4">2px</td>
+            <td className="whitespace-nowrap px-0 py-4">
               <div className="h-4 w-0 pr-32 bg-secondary" ></div>
             </td>          
           </tr>
