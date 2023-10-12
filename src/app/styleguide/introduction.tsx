@@ -11,7 +11,7 @@ export default function Introduction() {
       <h2 className='mb-10'>Introduction</h2>
 
       <h4>About</h4>
-      <p className='mb-5 text-gray-400'>Welcome to the &quot;Untitled One&quot; Design System! Our design system is a comprehensive resource that empowers DJs and producers to create, collaborate, and navigate their musical journey with ease and style. This guide is your key to understanding the principles, components, and guidelines that shape the user experience across our platform. </p>
+      <p className='mb-5 text-gray-400'>Welcome to the &quot;Untitled One&quot; Design System! UntitledOne is a comprehensive resource that empowers students and teachers to create, collaborate, and navigate their musical journey with ease and style. This guide is the designer and developers key to understanding the principles, components, and guidelines that shape the user experience across the platform. </p>
 
       <Devider />
 

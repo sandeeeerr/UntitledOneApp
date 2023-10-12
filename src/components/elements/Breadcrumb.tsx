@@ -14,7 +14,6 @@ type TBreadCrumbProps = {
 }
 
 const NextBreadcrumb = ({separator, containerClasses, listClasses, activeClasses, capitalizeLinks}: TBreadCrumbProps) => {
-
     const paths = usePathname()
     const pathNames = paths.split('/').filter( path => path )
 
