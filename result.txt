@@ -1,0 +1,27 @@
+.
+├── src
+│   ├── app
+│   │   ├── (auth)
+│   │   ├── api
+│   │   ├── page.tsx
+│   │   └── settings
+│   │       └── page.tsx
+│   ├── layouts
+│   │   └── layout.tsx
+│   ├── components
+│   │   ├── elements
+│   │   │   ├── Avatar.tsx
+│   │   │   ├── Button.tsx
+│   │   │   ├── Input.tsx
+│   │   └── modules
+│   │       ├── Header.tsx
+│   │       ├── SideBar.tsx
+│   │       └── UserAuthForm.tsx
+│   ├── lib
+│   ├── styles
+├── next.config.js
+├── package.json
+├── tailwind.config.js
+└── tsconfig.json
+
+
