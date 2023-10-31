@@ -1,5 +1,5 @@
 
-import { authOptions } from '@/lib/auth'
+import { authOptions, getAuthSession } from '@/lib/auth'
 import { getServerSession } from 'next-auth'
 
 import React from "react";
@@ -7,11 +7,16 @@ import { useState } from "react";
 import { useRouter } from 'next/navigation'
 import Link from "next/link";
 import {Button, buttonVariants} from "@element/Button";
+import { Avatar } from '@/components/elements/Avatar';
+import Image from 'next/image';
+
 
 const Header = async () => {
 
-
   const session = await getServerSession(authOptions)
+  if (!session?.user) {
+    // redirect(authOptions?.pages?.signIn || '/login')
+  }
   return (
   <>
     <nav className="fixed top-0 z-10 w-full bg-black border-y-2 border-t-transparent">
@@ -44,8 +49,10 @@ const Header = async () => {
               <Link href='/api/auth/signout' className={buttonVariants({ variant: 'ghost' })}>
                 Sign out
               </Link>
-              <Link href='/settings' className={buttonVariants()}>
-                Settings
+              <Link href='settings'>
+                <Avatar className='w-10 h-10'>
+                  <Image fill src={session.user.image} alt='profile picture' referrerPolicy='no-referrer' />
+                </Avatar>              
               </Link>
             </>
           ) : (

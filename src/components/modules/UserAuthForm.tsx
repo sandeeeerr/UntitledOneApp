@@ -31,17 +31,46 @@ const UserAuthForm: FC<UserAuthFormProps> = ({ className, ...props }) => {
     }
   }
 
+  const loginWithSpotify = async () => {
+    setIsLoading(true)
+
+    try {
+      await signIn('spotify')
+    } catch (error) {
+      toast({
+        title: 'Error',
+        description: 'There was an error logging in with Spotify',
+        variant: 'destructive',
+      })
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
   return (
-    <div className={cn('flex justify-center', className)} {...props}>
+    <div className={cn('', className)} {...props}>
       <Button
         isLoading={isLoading}
         type='button'
+        variant='secondary'
         size='sm'
-        className='w-full'
+        className='w-full mb-2'
         onClick={loginWithGoogle}
         disabled={isLoading}>
-        {isLoading ? null : <Icons.google className='h-4 w-4 mr-2' />}
+        {isLoading ? null : <Icons.google className='w-4 h-4 mr-2' />}
         Google
+      </Button>
+      
+      <Button
+        isLoading={isLoading}
+        type='button'
+        variant='secondary'
+        size='sm'
+        className='w-full'
+        onClick={loginWithSpotify}
+        disabled={isLoading}>
+        {isLoading ? null : <Icons.spotify className='w-4 h-4 mr-2' />}
+        Spotify
       </Button>
     </div>
   )

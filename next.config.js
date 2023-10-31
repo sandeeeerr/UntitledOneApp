@@ -11,7 +11,7 @@ const nextConfig = {
   },
   basePath: '',
   images: {
-    domains: ['uploadthing.com', 'lh3.googleusercontent.com'],
+    domains: ['uploadthing.com', 'lh3.googleusercontent.com', 'i.scdn.co'],
   },
   experimental: {
     appDir: true

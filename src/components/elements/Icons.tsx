@@ -1,10 +1,12 @@
 import { LucideProps, MessageSquare, User, PersonStanding, TimerReset, Scaling  } from 'lucide-react'
+import { BsSpotify } from "react-icons/bs";
 
 export const Icons = {
   user: User,
   personStanding: PersonStanding,
   timerReset: TimerReset,
   scaling: Scaling,
+  spotify: BsSpotify,
   logo: (props: LucideProps) => (
     <svg {...props} viewBox='0 0 497 497'>
       <g>
