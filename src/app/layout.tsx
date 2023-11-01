@@ -17,12 +17,13 @@ export default function RootLayout({
       <body suppressHydrationWarning={true} className={`overflow-x-hidden bg-background text-white ${inter.className}`}>
         {/* @ts-expect-error Server Component */}
         <Header />
-        <div className='max-w-6xl mx-auto px-4 mt-16 lg:mt-20' suppressHydrationWarning={true}>
+        <div className='max-w-6xl px-4 mx-auto mt-16 lg:mt-20' suppressHydrationWarning={true}>
           <main>
             {children}
           </main>
         </div>
         <Toaster/>
+        <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
       </body>
     </html>
   )
