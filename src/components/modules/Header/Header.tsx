@@ -47,7 +47,7 @@ const Header = async () => {
                 Projects
               </Link>
               <li className='list-none'>
-                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" className="flex items-center justify-between w-full ml-1 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" className="flex items-center justify-between w-full ml-1 ">
                   <Avatar className='w-10 h-10'>
                     <Image fill src={session.user.image} alt='profile picture' referrerPolicy='no-referrer' />
                   </Avatar>  
