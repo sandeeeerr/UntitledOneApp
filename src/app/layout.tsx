@@ -19,6 +19,7 @@ export default function RootLayout({
         className={`overflow-x-hidden bg-background text-white ${inter.className}`}
       >
         <Providers>
+          {/* @ts-expect-error Server Component */}
           <Header />
           <div
             className="max-w-6xl px-4 mx-auto mt-16 lg:mt-20"
