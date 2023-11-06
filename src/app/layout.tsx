@@ -12,6 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+    <>
     <html lang="en">
       <body
         suppressHydrationWarning={true}
@@ -30,5 +31,6 @@ export default function RootLayout({
         </Providers>
       </body>
     </html>
+    </>
   );
 }
