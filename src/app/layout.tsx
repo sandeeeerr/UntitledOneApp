@@ -20,6 +20,7 @@ export default function RootLayout({
         <Providers>
           {/* @ts-expect-error Server Component */}
           <Header />
+          
           <div
             className="max-w-6xl px-4 mx-auto mt-16 lg:mt-20"
             suppressHydrationWarning={true}
