@@ -1,9 +1,13 @@
 {
   "compilerOptions": {
-    "jsx":"react",
+    "jsx": "preserve",
     "strict": true,
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "noEmit": true,
@@ -21,19 +25,46 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@element/*": ["./src/components/elements/*"],
-      "@layout/*": ["./src/components/layouts/*"],
-      "@module/*": ["./src/components/modules/*"],
-      "@template/*": ["./src/components/templates/*"],
-      "@constant/*": ["./src/constants/*"],
-      "@context/*": ["./src/context/*"],
-      "@hook/*": ["./src/hooks/*"],
-      "@util/*": ["./src/utils/*"],
-      "@api/*": ["./src/api/*"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@element/*": [
+        "./src/components/elements/*"
+      ],
+      "@layout/*": [
+        "./src/components/layouts/*"
+      ],
+      "@module/*": [
+        "./src/components/modules/*"
+      ],
+      "@template/*": [
+        "./src/components/templates/*"
+      ],
+      "@constant/*": [
+        "./src/constants/*"
+      ],
+      "@context/*": [
+        "./src/context/*"
+      ],
+      "@hook/*": [
+        "./src/hooks/*"
+      ],
+      "@util/*": [
+        "./src/utils/*"
+      ],
+      "@api/*": [
+        "./src/api/*"
+      ]
     },
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
