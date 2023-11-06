@@ -1,21 +1,18 @@
 /** @type {import('next').NextConfig} */
 
-const path = require('path');
+const path = require("path");
 const nextConfig = {
   sassOptions: {
-    includePaths: [path.join(__dirname, 'app/styles')],
+    includePaths: [path.join(__dirname, "app/styles")],
   },
   i18n: {
-    locales: ['en-US'],
-    defaultLocale: 'en-US',
+    locales: ["en-US"],
+    defaultLocale: "en-US",
   },
-  basePath: '',
+  basePath: "",
   images: {
-    domains: ['uploadthing.com', 'lh3.googleusercontent.com', 'i.scdn.co'],
+    domains: ["uploadthing.com", "lh3.googleusercontent.com", "i.scdn.co"],
   },
-  experimental: {
-    appDir: true
-  }
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
