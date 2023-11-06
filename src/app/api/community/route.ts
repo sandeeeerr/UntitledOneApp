@@ -22,7 +22,7 @@ export async function POST(req: Request) {
     });
 
     if (communityExists) {
-      return new Response("Community already exists", { status: 409 });
+      return new Response("Community already exists!", { status: 409 });
     }
 
     // create community and associate it with the user
