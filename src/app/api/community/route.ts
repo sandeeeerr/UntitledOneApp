@@ -18,12 +18,11 @@ export async function POST(req: Request) {
     const communityExists = await db.community.findFirst({
       where: {
         name,
-        
       },
     });
 
     if (communityExists) {
-      return new Response("Community already exists!", { status: 409 });
+      return new Response("Community already exists", { status: 409 });
     }
 
     // create community and associate it with the user
