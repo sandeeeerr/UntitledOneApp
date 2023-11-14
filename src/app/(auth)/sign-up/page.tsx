@@ -1,11 +1,14 @@
+
 import { buttonVariants } from '@/components/elements/Button'
-import SignIn from '@/components/modules/Signin'
+import SignUp from '@/components/modules/SignUp'
 import { cn } from '@/lib/utils'
 import { ChevronLeft } from 'lucide-react'
 import Link from 'next/link'
 import { FC } from 'react'
 
-const page: FC = () => {
+interface pageProps {}
+
+const page: FC<pageProps> = ({}) => {
   return (
     <div className='absolute inset-0'>
       <div className='flex flex-col items-center justify-center h-full max-w-2xl gap-20 mx-auto'>
@@ -19,7 +22,7 @@ const page: FC = () => {
           Home
         </Link>
 
-        <SignIn />
+        <SignUp />
       </div>
     </div>
   )

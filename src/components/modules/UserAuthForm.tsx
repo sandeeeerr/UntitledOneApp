@@ -13,10 +13,11 @@ interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 const UserAuthForm: FC<UserAuthFormProps> = ({ className, ...props }) => {
   const { toast } = useToast();
-  const [isLoading, setIsLoading] = React.useState<boolean>(false);
+  const [isLoadingGoogle, setIsLoadingGoogle] = React.useState<boolean>(false);
+  const [isLoadingSpotify, setIsLoadingSpotify] = React.useState<boolean>(false);
 
   const loginWithGoogle = async () => {
-    setIsLoading(true);
+    setIsLoadingGoogle(true);
 
     try {
       await signIn("google");
@@ -27,12 +28,12 @@ const UserAuthForm: FC<UserAuthFormProps> = ({ className, ...props }) => {
         variant: "destructive",
       });
     } finally {
-      setIsLoading(false);
+      setIsLoadingGoogle(false);
     }
   };
 
   const loginWithSpotify = async () => {
-    setIsLoading(true);
+    setIsLoadingSpotify(true);
 
     try {
       await signIn("spotify");
@@ -43,35 +44,35 @@ const UserAuthForm: FC<UserAuthFormProps> = ({ className, ...props }) => {
         variant: "destructive",
       });
     } finally {
-      setIsLoading(false);
+      setIsLoadingSpotify(false);
     }
   };
 
   return (
     <div className={cn("", className)} {...props}>
       <Button
-        isLoading={isLoading}
+        isLoading={isLoadingGoogle}
         type="button"
         variant="secondary"
         size="sm"
         className="w-full mb-2"
         onClick={loginWithGoogle}
-        disabled={isLoading}
+        disabled={isLoadingGoogle}
       >
-        {isLoading ? null : <Icons.google className="w-4 h-4 mr-2" />}
+        {isLoadingGoogle ? null : <Icons.google className="w-4 h-4 mr-2" />}
         Google
       </Button>
 
       <Button
-        isLoading={isLoading}
+        isLoading={isLoadingSpotify}
         type="button"
         variant="secondary"
         size="sm"
         className="w-full"
         onClick={loginWithSpotify}
-        disabled={isLoading}
+        disabled={isLoadingSpotify}
       >
-        {isLoading ? null : <Icons.spotify className="w-4 h-4 mr-2" />}
+        {isLoadingSpotify ? null : <Icons.spotify className="w-4 h-4 mr-2" />}
         Spotify
       </Button>
     </div>
