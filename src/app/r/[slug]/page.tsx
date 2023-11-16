@@ -42,7 +42,16 @@ const page = async ({ params }: PageProps) => {
       <h1 className='text-3xl font-bold md:text-4xl h-14 '>
         r/{community.name}
       </h1>
-      <MiniCreateProject session={session} />
+      {session?.user ? (
+        <>
+          <MiniCreateProject session={session} />
+        </>
+      ) : (
+        <>
+          sign in to create a project
+        </>
+      )}
+      
       <PostFeed initialPosts={community.projects} communityName={community.name} />
     </>
   )
