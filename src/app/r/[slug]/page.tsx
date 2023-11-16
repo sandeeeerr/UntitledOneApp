@@ -1,4 +1,5 @@
 // import MiniCreatePost from '@/components/MiniCreatePost'
+import MiniCreateProject from '@/components/modules/MiniCreateProject'
 import PostFeed from '@/components/modules/PostFeed'
 // import { INFINITE_SCROLL_PAGINATION_RESULTS } from '@/config'
 import { getAuthSession } from '@/lib/auth'
@@ -38,10 +39,10 @@ const page = async ({ params }: PageProps) => {
 
   return (
     <>
-      <h1 className='text-3xl font-bold md:text-4xl h-14'>
+      <h1 className='text-3xl font-bold md:text-4xl h-14 '>
         r/{community.name}
       </h1>
-      {/* <MiniCreatePost session={session} /> */}
+      <MiniCreateProject session={session} />
       <PostFeed initialPosts={community.projects} communityName={community.name} />
     </>
   )

@@ -20,7 +20,7 @@ export default function RootLayout({
         className={`overflow-x-hidden bg-background text-white ${inter.className}`}
       >
         <Providers>
-          {/* @ts-expect-error Server Component */}
+          {/* @ts-ignore */}
           <Header />
           {authModal}
           <div
