@@ -40,7 +40,7 @@ const page = async ({ params }: PageProps) => {
   return (
     <>
       <h1 className='text-3xl font-bold md:text-4xl h-14 '>
-        r/{community.name}
+        c/{community.name}
       </h1>
       {session?.user ? (
         <>

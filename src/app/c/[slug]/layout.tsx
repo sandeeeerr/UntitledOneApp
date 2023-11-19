@@ -69,7 +69,7 @@ const Layout = async ({
           {/* info sidebar */}
           <div className='order-first overflow-hidden border-l darkGrey h-fit md:order-last'>
             <div className='px-6 py-4'>
-              <p className='font-semibold'>About r/{community.name}</p>
+              <p className='font-semibold'>About c/{community.name}</p>
             </div>
             <dl className='px-6 pb-6 text-sm leading-6'>
               <div className='flex justify-between py-3 gap-x-4'>
@@ -104,7 +104,7 @@ const Layout = async ({
                     variant: 'secondary',
                     className: 'w-full mb-6',
                   })}
-                  href={`r/${slug}/submit`}>
+                  href={`c/${slug}/submit`}>
                   Create Post
                 </Link>
               </div>
