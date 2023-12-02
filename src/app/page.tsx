@@ -54,6 +54,7 @@ const page = async ({ params }: PageProps) => {
       >
         Create Community
       </Link>
+      
       <ul>
         {communitys.map(community=>(
           <a href={`c/${community.name}`}><li>{community.name}</li></a>
