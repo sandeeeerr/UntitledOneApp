@@ -75,7 +75,7 @@ const Page = () => {
           </p>
           <div className="relative">
             <p className="absolute inset-y-0 left-0 grid w-8 text-sm place-items-center text-zinc-400">
-              r/
+              c/
             </p>
             <Input
               value={input}
