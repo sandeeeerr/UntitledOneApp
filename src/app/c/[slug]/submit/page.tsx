@@ -22,14 +22,14 @@ const page = async ({ params }: pageProps) => {
   return (
     <div className='flex flex-col items-start gap-6'>
       {/* heading */}
-      <div className='pb-5 border-b border-gray-200'>
+      <div className='pb-5'>
         <div className='flex flex-wrap items-baseline -mt-2 -ml-2'>
-          <h3 className='mt-2 ml-2 text-base font-semibold leading-6 text-gray-900'>
+          <h1 className='text-3xl font-bold md:text-4xl '>
             Create Project
-          </h3>
-          <p className='mt-1 ml-2 text-sm text-gray-500 truncate'>
-            in r/{params.slug}
-          </p>
+          </h1>
+          <h2 className='mt-1 ml-2 text-base truncate'>
+            in c/{params.slug}
+          </h2>
         </div>
       </div>
 

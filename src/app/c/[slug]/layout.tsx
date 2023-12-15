@@ -105,7 +105,7 @@ const Layout = async ({
                     className: 'w-full mb-6',
                   })}
                   href={`c/${slug}/submit`}>
-                  Create Post
+                  Create Project
                 </Link>
               </div>
             </dl>

@@ -1,6 +1,8 @@
 'use client'
 
 import EditorJS from '@editorjs/editorjs'
+import AttachesTool from '@editorjs/attaches';
+
 import { zodResolver } from '@hookform/resolvers/zod'
 import { usePathname, useRouter } from 'next/navigation'
 import { useCallback, useEffect, useRef, useState } from 'react'
@@ -8,7 +10,6 @@ import { useForm } from 'react-hook-form'
 import TextareaAutosize from 'react-textarea-autosize'
 import { z } from 'zod'
 
-import { Label } from "@/components/elements/Label";
 import { toast } from '@/hooks/use-toast'
 import { uploadFiles } from '@/lib/uploadthing'
 import { ProjectCreationRequest, ProjectValidator } from '@/lib/validators/project'
@@ -75,54 +76,53 @@ export const Editor: React.FC<EditorProps> = ({ communityId }) => {
   const initializeEditor = useCallback(async () => {
     const EditorJS = (await import('@editorjs/editorjs')).default
     const Header = (await import('@editorjs/header')).default
-    // const Embed = (await import('@editorjs/embed')).default
-    // const Table = (await import('@editorjs/table')).default
-    const List = (await import('@editorjs/list')).default
-    // const Code = (await import('@editorjs/code')).default
-    const LinkTool = (await import('@editorjs/link')).default
-    // const InlineCode = (await import('@editorjs/inline-code')).default
-    // const ImageTool = (await import('@editorjs/image')).default
-
+    const AttachesTool = (await import('@editorjs/attaches')).default
+    const Embed = (await import('@editorjs/embed')).default
+    
     if (!ref.current) {
       const editor = new EditorJS({
         holder: 'editor',
         onReady() {
           ref.current = editor
         },
-        placeholder: 'Type here to write your project...',
-        inlineToolbar: true,
-        data: { blocks: [] },
-        tools: {
-          header: Header,
-          linkTool: {
-            class: LinkTool,
-            config: {
-              endpoint: '/api/link',
+        placeholder: '',
+        inlineToolbar: false,
+        data: { blocks: [
+          {
+            type: 'paragraph',
+            data: {
+              text: 'Type here...'
+            }
+          },
+          {
+            type: 'attaches',
+            data: {
+
             },
           },
-          // image: {
-          //   class: ImageTool,
-          //   config: {
-          //     uploader: {
-          //       async uploadByFile(file: File) {
-          //         // upload to uploadthing
-          //         const [res] = await uploadFiles([file], 'imageUploader')
 
-          //         return {
-          //           success: 1,
-          //           file: {
-          //             url: res.fileUrl,
-          //           },
-          //         }
-          //       },
-          //     },
-          //   },
-          // },
-          list: List,
-          // code: Code,
-          // inlineCode: InlineCode,
-          // table: Table,
-          // embed: Embed,
+        ] },
+        tools: {
+          header: Header,
+          embed: Embed,
+          attaches: {
+            class: AttachesTool,
+            config: {
+              uploader: {
+                async uploadByFile(file: File) {
+                  // upload to uploadthing
+                  const [res] = await uploadFiles([file], 'fileUploader')
+
+                  return {
+                    success: 1,
+                    file: {
+                      url: res.fileUrl,
+                    },
+                  }
+                },
+              },
+            },
+          }
         },
       })
     }
@@ -161,7 +161,6 @@ export const Editor: React.FC<EditorProps> = ({ communityId }) => {
 
       return () => {
         ref.current?.destroy()
-        // ref.current.destroy()
         ref.current = undefined
       }
     }
@@ -186,12 +185,12 @@ export const Editor: React.FC<EditorProps> = ({ communityId }) => {
   const { ref: titleRef, ...rest } = register('title')
 
   return (
-    <div className='w-full p-4 border rounded-lg bg-darkGrey'>
+    <div className='w-full p-4 border rounded-lg bg-backgroundSecondary'>
       <form
         id='community-project-form'
         className='w-fit'
         onSubmit={handleSubmit(onSubmit)}>
-        <div className='prose prose-stone'>
+        <div className='prose prose-stone dark:prose-invert'>
           <TextareaAutosize
             ref={(e) => {
               titleRef(e)
@@ -200,38 +199,9 @@ export const Editor: React.FC<EditorProps> = ({ communityId }) => {
             }}
             {...rest}
             placeholder='Title'
-            className='w-full overflow-hidden text-5xl font-bold text-white bg-transparent appearance-none resize-none focus:outline-none'
+            className='w-full overflow-hidden text-5xl font-bold bg-transparent appearance-none resize-none focus:outline-none'
           />
-          <div id='editor' className='min-h-[100px]' />
-        </div>
-        <div className="flex items-center justify-center w-full">
-          <Label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed rounded cursor-pointer border-lightGrey bg-backgroundSecondary">
-            <div className="flex flex-col items-center justify-center pt-5 pb-6">
-              <svg
-                className="w-8 h-8 mb-4 text-lightGrey"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 20 16"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  stroke-width="2"
-                  d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
-                />
-              </svg>
-              <p className="mb-2 text-sm text-lightGrey">
-                Drag & drop or{" "}
-                <span className="text-secondary">Choose file</span> to upload{" "}
-              </p>
-              <p className="text-xs text-lightGrey">
-                FLAC, MP3, WAV or AAC (MAX. 100 MB)
-              </p>
-            </div>
-            <input id="dropzone-file" type="file" className="hidden" />
-          </Label>
+          <div id='editor' className='min-h-[500px]' />
         </div>
       </form>
     </div>
