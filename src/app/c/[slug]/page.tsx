@@ -42,6 +42,11 @@ const page = async ({ params }: PageProps) => {
       <h1 className='text-3xl font-bold md:text-4xl h-14 '>
         c/{community.name}
       </h1>
+      {community.projects.map((project, index) => {
+        {
+          <p>{project.title}sasdfas{index}</p>
+        }
+      })}
       {session?.user ? (
         <>
           <MiniCreateProject session={session} />
@@ -51,8 +56,9 @@ const page = async ({ params }: PageProps) => {
           sign in to create a project
         </>
       )}
-      
-      <PostFeed initialPosts={community.projects} communityName={community.name} />
+
+
+      {/* <PostFeed initialPosts={community.projects} communityName={community.name} /> */}
     </>
   )
 }
