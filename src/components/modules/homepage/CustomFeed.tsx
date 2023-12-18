@@ -51,7 +51,7 @@ const CustomFeed = async () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 mt-2 mb-12 md:grid-cols-4" id="frameworks-integration">
+      <div className="grid grid-cols-2 gap-3 mt-2 mb-12 sm:gap-4 md:grid-cols-4" id="frameworks-integration">
       {projects.map((project, index) => {
         const votesAmt = project.votes.reduce((acc, vote) => {
           if (vote.type === 'UP') return acc + 1

@@ -17,7 +17,7 @@ export default async function Home() {
         {/* @ts-expect-error server component */}
         {session ? <CustomFeed /> : 
         <section className="bg-black rounded-lg">
-          <div className="max-w-screen-xl px-0 py-8 mx-auto mb-10 sm:py-10 lg:px-0">
+          <div className="max-w-screen-xl px-8 py-8 mx-auto mb-10 sm:py-10 lg:px-10">
               <div className="max-w-screen-sm mx-auto text-center">
                   <h2 className="mb-3 text-4xl font-extrabold leading-tight tracking-tight text-white">Elevate Your Sound!</h2>
                   <p className="mb-4 font-light text-gray-400 md:text-lg">Connect, Collaborate, and Get Feedback from Fellow Artists.</p>

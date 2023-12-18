@@ -17,7 +17,7 @@ const Header = async () => {
   }
   return (
     <>
-      <nav className="fixed top-0 z-10 w-full bg-black border-y-2 border-t-transparent">
+      <nav className="fixed top-0 z-30 w-full bg-black border-y-2 border-t-transparent">
         <div className="max-w-6xl px-4 mx-auto">
           <div className="flex justify-between">
             <div className="flex space-x-4">
@@ -32,8 +32,8 @@ const Header = async () => {
                   Home
                 </Link>
                 <Link
-                  href="/explore"
-                  className={buttonVariants({ variant: "ghost" })}
+                  href="#"
+                  className={cn(buttonVariants({ variant: "ghost" }), "opacity-40")}
                 >
                   Expore
                 </Link>

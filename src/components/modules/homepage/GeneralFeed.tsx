@@ -45,7 +45,7 @@ const GeneralFeed = async () => {
   return (
     <>
       <div className="flow-root mb-4">  
-        <h3 className="float-left">Populair communitys:</h3>
+        <h3 className="float-left overflow-hidden max-w-50">Populair communitys:</h3>
         <div className="float-right">
         <Link
           className={buttonVariants({
@@ -59,16 +59,16 @@ const GeneralFeed = async () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 mt-2 mb-12 md:grid-cols-4" id="frameworks-integration">
+      <div className="grid grid-cols-2 gap-3 mt-2 mb-12 sm:gap-4 md:grid-cols-4" id="frameworks-integration">
         {communitys.map(community=>(
           <a className="grid w-full min-w-[7rem] transform cursor-pointer rounded-xl bg-darkGrey transition-all hover:scale-105 hover:border-blue-gray-100 hover:bg-blue-gray-50 hover:bg-opacity-25" href={`c/${community.name}`}>
 
-            <div className='bottom-0 z-10 p-5 pt-14 '>
-              <h1 className='text-lg font-semibold leading-6 text-white'>
+            <div className='z-10 p-3 pt-10 ottom-0 sm:p-5 sm:pt-14'>
+              <h1 className='mb-0 text-base font-semibold leading-6 text-white sm:mb-1 sm:text-xl'>
                 {community.name}
 
               </h1>
-              <div className='z-20 mb-2 text-sm'>
+              <div className='z-20 mb-1 text-sm sm:mb-2'>
                 <div className='flex items-center gap-2 text-gray-300 w-fit'>
                   <Users className='w-4 h-4' /> {community.subscribers.length} projects
                 </div>
@@ -102,7 +102,7 @@ const GeneralFeed = async () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 mt-2 mb-12 md:grid-cols-4" id="frameworks-integration">
+      <div className="grid grid-cols-2 gap-3 mt-2 mb-12 sm:gap-4 md:grid-cols-4" id="frameworks-integration">
       {projects.map((project, index) => {
         const votesAmt = project.votes.reduce((acc, vote) => {
           if (vote.type === 'UP') return acc + 1

@@ -51,7 +51,7 @@ const ProjectFeed: FC<ProjectFeedProps> = ({ initialProjects, communityName }) =
   const projects = data?.pages.flatMap((page) => page) ?? initialProjects
 
   return (
-    <ul className='grid grid-cols-1 gap-6 mt-2 mb-12 md:grid-cols-3'>
+    <ul className='grid grid-cols-2 gap-3 mt-2 mb-12 sm:gap-4 md:grid-cols-3'>
       {projects.map((project, index) => {
         const votesAmt = project.votes.reduce((acc, vote) => {
           if (vote.type === 'UP') return acc + 1
