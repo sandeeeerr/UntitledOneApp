@@ -15,7 +15,7 @@ export default async function Home() {
     <>
       <h1 className='text-3xl font-bold md:text-4xl'>Your feed</h1>
       <div className=''>
-        {/* @ts-ignore */}
+        {/* @ts-ignore-error */}
         {session ? <CustomFeed /> : ''}
         <GeneralFeed />
       </div>
