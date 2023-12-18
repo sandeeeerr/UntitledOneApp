@@ -1,7 +1,7 @@
-// import MiniCreatePost from '@/components/MiniCreatePost'
+
 import MiniCreateProject from '@/components/modules/MiniCreateProject'
-import PostFeed from '@/components/modules/PostFeed'
-// import { INFINITE_SCROLL_PAGINATION_RESULTS } from '@/config'
+import ProjectFeed from '@/components/modules/ProjectFeed'
+import { INFINITE_SCROLL_PAGINATION_RESULTS } from '@/config'
 import { getAuthSession } from '@/lib/auth'
 import { db } from '@/lib/db'
 import { notFound } from 'next/navigation'
@@ -30,7 +30,7 @@ const page = async ({ params }: PageProps) => {
         orderBy: {
           createdAt: 'desc'
         },
-        // take: INFINITE_SCROLL_PAGINATION_RESULTS,
+        take: INFINITE_SCROLL_PAGINATION_RESULTS,
       },
     },
   })
@@ -42,14 +42,15 @@ const page = async ({ params }: PageProps) => {
       <h1 className='text-3xl font-bold md:text-4xl h-14 '>
         c/{community.name}
       </h1>
-      {community.projects.map((project, index) => {
-        {
-          <p>{project.title}sasdfas{index}</p>
-        }
-      })}
+
       {session?.user ? (
         <>
           <MiniCreateProject session={session} />
+          
+          {community.projects.map((project, index) => {
+            
+        
+          })}
         </>
       ) : (
         <>
@@ -58,7 +59,7 @@ const page = async ({ params }: PageProps) => {
       )}
 
 
-      {/* <PostFeed initialPosts={community.projects} communityName={community.name} /> */}
+      <ProjectFeed initialProjects={community.projects} communityName={community.name} />
     </>
   )
 }
