@@ -3,7 +3,7 @@
 import AvatarsStyleguide from "@/components/modules/StyleGuide/Components/Avatars";
 import BreadcrumbsStyleguide from "@/components/modules/StyleGuide/Components/Breadcrumbs";
 import FormsStyleguide from "@/components/modules/StyleGuide/Components/Forms";
-import Section from "@/components/modules/section/Section";
+import Section from "@/components/modules/Section/Section";
 import ButtonsStyleGuide from "@module/StyleGuide/Components/Buttons";
 
 import hljs from "highlight.js";

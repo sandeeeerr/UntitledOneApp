@@ -5,7 +5,7 @@ import markdown from "highlight.js/lib/languages/markdown";
 import { useEffect } from "react";
 import ColorScheme from "@module/StyleGuide/Design/ColorScheme";
 import Typography from "@module/StyleGuide/Design/Typography";
-import Section from "@/components/modules/section/Section";
+import Section from "@/components/modules/Section/Section";
 import Animation from "@module/StyleGuide/Design/Animation";
 import Border from "@module/StyleGuide/Design/Border";
 import Layout from "@module/StyleGuide/Design/Layout";

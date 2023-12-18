@@ -2,7 +2,7 @@ import React from "react";
 import ColorBlock from "@element/ColorBlock";
 import Devider from "@element/Devider";
 import { ShowcaseBlock } from "@element/ShowcaseBlock";
-import Header from "@/components/modules/header/Header";
+import Header from "@/components/modules/Header/Header";
 
 function Layout() {
   return (
