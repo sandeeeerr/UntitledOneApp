@@ -59,7 +59,7 @@ const GeneralFeed = async () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-6 mt-2 mb-12 md:grid-cols-4" id="frameworks-integration">
+      <div className="grid grid-cols-1 gap-6 mt-2 mb-12 md:grid-cols-4" id="frameworks-integration">
         {communitys.map(community=>(
           <a className="grid w-full min-w-[7rem] transform cursor-pointer rounded-xl bg-darkGrey transition-all hover:scale-105 hover:border-blue-gray-100 hover:bg-blue-gray-50 hover:bg-opacity-25" href={`c/${community.name}`}>
 
@@ -102,7 +102,7 @@ const GeneralFeed = async () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-6 mt-2 mb-12 md:grid-cols-4" id="frameworks-integration">
+      <div className="grid grid-cols-1 gap-6 mt-2 mb-12 md:grid-cols-4" id="frameworks-integration">
       {projects.map((project, index) => {
         const votesAmt = project.votes.reduce((acc, vote) => {
           if (vote.type === 'UP') return acc + 1
