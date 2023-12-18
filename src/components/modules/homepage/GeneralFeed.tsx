@@ -70,7 +70,7 @@ const GeneralFeed = async () => {
               </h1>
               <div className='z-20 mb-1 text-sm sm:mb-2'>
                 <div className='flex items-center gap-2 text-gray-300 w-fit'>
-                  <Users className='w-4 h-4' /> {community.subscribers.length} projects
+                  <Users className='w-4 h-4' /> {community.subscribers.length} subscribers
                 </div>
                 <div className='flex items-center gap-2 text-gray-300 w-fit'>
                   <Folder className='w-4 h-4' /> {community.projects.length} projects
