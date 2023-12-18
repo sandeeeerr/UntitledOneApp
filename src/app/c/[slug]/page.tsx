@@ -46,11 +46,7 @@ const page = async ({ params }: PageProps) => {
       {session?.user ? (
         <>
           <MiniCreateProject session={session} />
-          
-          {community.projects.map((project, index) => {
-            
         
-          })}
         </>
       ) : (
         <>

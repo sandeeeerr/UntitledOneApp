@@ -40,7 +40,7 @@ const ProjectVoteClient = ({
         projectId: projectId,
       };
 
-      await axios.patch("/api/subreddit/project/vote", payload);
+      await axios.patch("/api/community/project/vote", payload);
     },
     onError: (err, voteType) => {
       if (voteType === "UP") setVotesAmt((prev) => prev - 1);
@@ -78,7 +78,7 @@ const ProjectVoteClient = ({
   });
 
   return (
-    <div className="flex flex-col gap-4 pb-4 pr-6 sm:gap-0 sm:w-20 sm:pb-0">
+    <div className="flex flex-col gap-4 pt-2 pb-4 pr-6 sm:gap-0 sm:w-20 sm:pb-0">
       {/* upvote */}
       <Button
         onClick={() => vote("UP")}
@@ -87,14 +87,14 @@ const ProjectVoteClient = ({
         aria-label="upvote"
       >
         <ArrowBigUp
-          className={cn("h-5 w-5 text-zinc-700", {
+          className={cn("h-5 w-5 text-gray-300 fill-gray-300", {
             "text-emerald-500 fill-emerald-500": currentVote === "UP",
           })}
         />
       </Button>
 
       {/* score */}
-      <p className="py-2 text-sm font-medium text-center text-zinc-900">
+      <p className="py-2 text-sm font-medium text-center text-white">
         {votesAmt}
       </p>
 
@@ -109,7 +109,7 @@ const ProjectVoteClient = ({
         aria-label="downvote"
       >
         <ArrowBigDown
-          className={cn("h-5 w-5 text-zinc-700", {
+          className={cn("h-5 w-5 text-gray-300 fill-gray-300", {
             "text-red-500 fill-red-500": currentVote === "DOWN",
           })}
         />

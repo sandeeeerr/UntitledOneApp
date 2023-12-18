@@ -2,6 +2,7 @@
 
 import { FC } from 'react'
 import dynamic from 'next/dynamic'
+import CustomFileRender from './renders/CustomFileRender'
 
 const Output = dynamic(
   async () => (await import('editorjs-react-renderer')).default,
@@ -13,6 +14,7 @@ interface EditorOutputProps {
 }
 
 const renderers = {
+  attaches: CustomFileRender,
 }
 
 const style = {
@@ -23,6 +25,8 @@ const style = {
 }
 
 const EditorOutput: FC<EditorOutputProps> = ({ content }) => {
+  console.log(content);
+  
   return (
     // @ts-ignore
     <Output

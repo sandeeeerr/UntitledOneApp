@@ -1,6 +1,6 @@
 import "@/styles/app.scss";
 import { Inter } from "next/font/google";
-import Header from "@module/Header/Header";
+import Header from "@/components/modules/header/Header";
 import { Toaster } from "@/components/elements/Toaster";
 import Providers from "@/components/modules/Providers";
 
