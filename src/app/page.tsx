@@ -13,10 +13,28 @@ export default async function Home() {
 
   return (
     <>
-      <h1 className='text-3xl font-bold md:text-4xl'>Your feed</h1>
       <div className=''>
         {/* @ts-expect-error server component */}
-        {session ? <CustomFeed /> : ''}
+        {session ? <CustomFeed /> : 
+        <section className="bg-black rounded-lg">
+          <div className="max-w-screen-xl px-0 py-8 mx-auto mb-10 sm:py-10 lg:px-0">
+              <div className="max-w-screen-sm mx-auto text-center">
+                  <h2 className="mb-3 text-4xl font-extrabold leading-tight tracking-tight text-white">Elevate Your Sound!</h2>
+                  <p className="mb-4 font-light text-gray-400 md:text-lg">Connect, Collaborate, and Get Feedback from Fellow Artists.</p>
+                  <Link
+                    className={buttonVariants({
+                      className: "",
+                      variant: "default",
+                      
+                    })}
+                    href={`/c/create`}
+                  >
+                    Join Now
+                  </Link>
+              </div>
+          </div>
+        </section>
+        }
         {/* @ts-expect-error server component */}
         <GeneralFeed />
       </div>

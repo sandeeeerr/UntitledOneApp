@@ -32,10 +32,10 @@ const Project: FC<ProjectProps> = ({
   const pRef = useRef<HTMLParagraphElement>(null)
 
   return (
-    <div className='relative rounded-md bg-Grey' >
+    <div className='relative transition-all rounded-md bg-Grey hover:scale-105 hover:border-blue-gray-100 hover:bg-blue-gray-50 hover:bg-opacity-25' >
 
-      <a href={`/c/${communityName}/project/${project.id}`}>
-      <svg className='' width="292" height="233" viewBox="0 0 292 233" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <a  href={`/c/${communityName}/project/${project.id}`}>
+      <svg className='hover:bg-blue-gray-50 hover:bg-opacity-25' width="292" height="233" viewBox="0 0 292 233" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M16 232.023H276C284.837 232.023 292 224.859 292 216.023V40.0227C292 31.1861 284.837 24.0227 276 24.0227H148.13C145.105 24.0227 142.143 23.1655 139.586 21.5505L115.091 6.0802C115.032 6.04273 114.976 6.00684 114.917 5.96908L114.913 5.96644C114.174 5.49337 108.908 2.16763 105 1.02271C101.244 -0.0777451 95.6805 -0.0196499 94.3123 0.0134652C94.103 0.0185309 93.8953 0.0226902 93.6859 0.0226902H16C7.16344 0.0226902 0 7.18613 0 16.0227V216.023C0 224.859 7.16345 232.023 16 232.023Z" fill="#474747"/>
       </svg>
       <div className='absolute bottom-0 z-10 p-5'>
@@ -43,7 +43,7 @@ const Project: FC<ProjectProps> = ({
           {project.title}
 
         </h1>
-        <div className='z-20 pb-1 text-sm'>
+        <div className='z-20 mb-2 text-sm'>
           <div className='flex items-center gap-2 text-gray-300 w-fit'>
             <MessageSquare className='w-4 h-4' /> {commentAmt} comments
           </div>

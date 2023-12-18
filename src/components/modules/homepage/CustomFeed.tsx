@@ -46,16 +46,8 @@ const CustomFeed = async () => {
     <>
 
       <div className="flow-root mb-4">  
-        <h3 className="float-left">subscribed projects:</h3>
+        <h3 className="float-left">Projects for you:</h3>
         <div className="float-right">
-        <Link
-          className={buttonVariants({
-            className: "my-2",
-          })}
-          href={`/c/create`}
-        >
-          Create Project
-        </Link>
         </div>
       </div>
 
